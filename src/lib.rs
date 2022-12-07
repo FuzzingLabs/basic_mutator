@@ -239,27 +239,27 @@ impl Mutator {
     pub fn mutate<T: InputDatabase>(&mut self, mutations: usize, inputs: &T) {
         /// List of mutation strategies which do not require an input database
         const STRATEGIES: &[fn(&mut Mutator)] = &[
-            Mutator::shrink,
-            Mutator::expand,
+            //Mutator::shrink,
+            //Mutator::expand,
             Mutator::bit,
             Mutator::inc_byte,
             Mutator::dec_byte,
             Mutator::neg_byte,
             Mutator::add_sub,
-            Mutator::set,
+            //Mutator::set,
             Mutator::swap,
             Mutator::copy,
             Mutator::inter_splice,
-            Mutator::insert_rand,
+            //Mutator::insert_rand,
             Mutator::overwrite_rand,
-            Mutator::byte_repeat_overwrite,
-            Mutator::byte_repeat_insert,
+            //Mutator::byte_repeat_overwrite,
+            //Mutator::byte_repeat_insert,
             Mutator::magic_overwrite,
-            Mutator::magic_insert,
+            //Mutator::magic_insert,
             Mutator::random_overwrite,
-            Mutator::random_insert,
+            //Mutator::random_insert,
             Mutator::splice_overwrite,
-            Mutator::splice_insert,
+            //Mutator::splice_insert,
         ];
 
         // Save the old state of the exponential random and randomly disable
